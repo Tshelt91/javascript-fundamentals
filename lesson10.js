@@ -4,7 +4,7 @@ programmingLanguages.set("lang1", "JavaScript");
 programmingLanguages.set("lang2", "Python");
 programmingLanguages.set("lang3", "Java");
 programmingLanguages.set("lang4", "Ruby");
-// console.log(programmiingLanguages);
+// console.log(programmingLanguages);
 
 const getDays = () => {
   const week = new Map();
