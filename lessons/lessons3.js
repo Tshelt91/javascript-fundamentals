@@ -70,6 +70,3 @@ console.log(
     console.log(msg.toUpperCase());
 
 
-]
-
-
