@@ -1,6 +1,7 @@
 const chalk = require("chalk");
 const prompt = require("prompt-sync")({ sigint: true });
 const fs = require("fs");
+const { takeCoverage } = require("v8");
 
 const greeting =
   "Hi! Today, you will be taking a quiz. Each question will be 'true or false' or multiple choice. You will have 10 questions to answer. Please enter your name before we begin.";
@@ -10,7 +11,7 @@ const firstName = prompt("First Name: ");
 const lastName = prompt("Last Name: ");
 
 function newUser() {
-  console.log(firstName + " " + lastName, new Date().toLocaleDateString());
+  console.log(`Hello ${firstName} ${lastName}! Date: ` + new Date().toLocaleDateString());
 }
 console.log();
 newUser();
@@ -237,7 +238,20 @@ if (answers10.trim().toLowerCase() == "a") {
 console.log()
 console.log("You're finished! Let's see how you did...")
 
+while (grade <=10) {
+  console.log (`Sorry, you got ${grade} out of 20. You got an F. `);
+} if (grade<= 11 && grade >=12) {
+  console.log (`Sorry, you got ${grade} out of 20. You got a D. `);
+} if (grade <= 13 && grade >=14 ) {
+  console.log (`You got ${grade} out of 20. You got a C. `);
+} if (grade <= 15 && grade >=16 ) {
+  console.log (`Great Job! You got ${grade} out of 20, you got a B. `);
+} if (grade <= 17 && grade >=19 ) {
+  console.log (`Awesome! You got ${grade} out of 20, you got an A. `);
+} else (grade>=20 ) 
+  console.log (`Awesome! You got ${grade} out of 20, you got an A+. `);
+
 const note = () => {
-  console.log(`You got ${grade} out of 20`);
+  console.log("Thank you for your time!");
 };
 setTimeout(note, 4000);
