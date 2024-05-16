@@ -48,10 +48,10 @@ if (excludedChars) {
 };
 
 return password.replace(
-  new RegExp(`[${excludedChars}], "g"),
+  new RegExp(`[${excludedChars}]`, "g"),
   passwordTypeWithExclusions.charAt(
     Math.floor(Math.random() * passTypeWithExclusions.length)
-  )
+  ))
   
   console.log(lengthSelectionMenu);
   let lengthChoice = prompt();
