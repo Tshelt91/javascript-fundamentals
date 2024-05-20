@@ -1,28 +1,4 @@
-// const prompt = require("prompt-sync")({ sigint: true });
-// const chalk = require("chalk");
-// const {
-//   checkYorN,
-//   chooseYourBun,
-//   chooseYourCheese,
-//   chooseYourMeat,
-//   chooseYourVegetables
-// } = require("./helpers");
-
-const shopTitle =
-  "================================================\n" +
-  "=\t\t\t\t\t       =\n" +
-  "=\t\t" +
-  "  " +
-  "BOB SANDWICH" +
-  "\t\t       =" +
-  "\n=\t\t\t\t\t       =" +
-  "\n================================================";
-const welcomeStr = "Welcome to Bob Sandwich shop!\n";
-
-console.log(shopTitle);
-console.log(welcomeStr);
-
-// let userInput = prompt("Would you like to make an order; Y or N? ");
+let userInput = prompt("Would you like to make an order; Y or N? ");
 
 // while (!checkYorN(userInput)) {
 //   userInput = prompt('Please enter letter "Y" or letter "N": ');

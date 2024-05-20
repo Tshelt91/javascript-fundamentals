@@ -1,10 +1,20 @@
 const chalk = require("chalk");
 const prompt = require("prompt-sync")({ sigint: true });
 const fs = require("fs");
-const { takeCoverage } = require("v8");
+
+const Title =
+  "================================================\n" +
+  "=\t\t\t\t\t       =\n" +
+  "=\t\t" +
+  "  " +
+ "QUIZ PROJECT!" +
+  "\t\t       =" +
+  "\n=\t\t\t\t\t       =" +
+  "\n================================================";
 
 const greeting =
-  "Hi! Today, you will be taking a quiz. Each question will be 'true or false' or multiple choice. You will have 10 questions to answer. Please enter your name before we begin.";
+  " Hi! Today, you will be taking a quiz.\n Each question will be 'true or false' or multiple choice.\n You will have 10 questions to answer. Please enter your name before we begin.";
+console.log(Title);
 console.log(greeting);
 
 const firstName = prompt("First Name: ");
@@ -32,22 +42,20 @@ if (answers1.trim().toLowerCase() == "c") {
       "Hurray! Babylonians created the 7-day-week calendar that we, nationally, use today."
     )
   );
-} else { 
-    (answers1.trim().toLowerCase() == "a", "b", "d");
-{
-  console.log(chalk.red("That is not the correct answer!"));
+} else {
+  answers1.trim().toLowerCase() == "a", "b", "d";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
 }
-}
-console.log()
+console.log();
 
+// const note1 = () => {
+//   console.log("Next question!");
+// };
+// setTimeout(note1, 2000);
 
-const note1 = () => {
-  console.log("Next question!");
-};
-setTimeout(note1, 2000);
-
-
-console.log()
+console.log();
 const question2 = "What State is the capital city of 'Des Moines' in?";
 console.log(question2);
 let answers2 = prompt("a. Missouri b. Chicago c. Michigan d. Iowa ");
@@ -63,20 +71,19 @@ if (answers2.trim().toLowerCase() == "d") {
     )
   );
 } else {
- (answers2.trim().toLowerCase() == "a", "b", "c");
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
-
+  answers2.trim().toLowerCase() == "a", "b", "c";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
 
 // const note2 = () => {
 //   console.log("Next question!");
 // };
 // setTimeout(note2, 4000);
 
-
-console.log()
+console.log();
 const question3 = "True or False? Celcius is measured in 0 - 100 degrees.";
 console.log(question3);
 let answers3 = prompt("a. True b. False ");
@@ -95,7 +102,7 @@ if (answers3.trim().toLowerCase() == "a") {
 if (answers3.trim().toLowerCase() == "b") {
   console.log(chalk.red("That is not the correct answer!"));
 }
-console.log()
+console.log();
 const question4 = "Aureolin is a shade of what color?";
 console.log(question4);
 let answers4 = prompt("a. Red b. Yellow c. Blue d. Brown ");
@@ -111,11 +118,12 @@ if (answers4.trim().toLowerCase() == "b") {
     )
   );
 } else {
- (answers4.trim().toLowerCase() == "a", "b", "c");
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
+  answers4.trim().toLowerCase() == "a", "b", "c";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
 const question5 = "What type of animal is a platypus?";
 console.log(question5);
 let answers5 = prompt("a. Bird b. Fish c. Reptile d. Mammal ");
@@ -126,17 +134,17 @@ while (!("aAbBcCdD".includes(answers5) && answers5.length == 1)) {
 if (answers5.trim().toLowerCase() == "d") {
   grade = grade + 2;
   console.log(
-    chalk.green(
-      "Woohoo! The platypus is the only mammal that can lay eggs."
-    )
+    chalk.green("Woohoo! The platypus is the only mammal that can lay eggs.")
   );
 } else {
- (answers5.trim().toLowerCase() == "a", "b", "c");
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
-const question6 = "What is the symbol for Gold in the Periodic Table of Elements?";
+  answers5.trim().toLowerCase() == "a", "b", "c";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
+const question6 =
+  "What is the symbol for Gold in the Periodic Table of Elements?";
 console.log(question6);
 let answers6 = prompt("a. Au b. Go c. Ag d. U ");
 
@@ -151,11 +159,12 @@ if (answers6.trim().toLowerCase() == "a") {
     )
   );
 } else {
- (answers6.trim().toLowerCase() == "b", "c", "d");
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
+  answers6.trim().toLowerCase() == "b", "c", "d";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
 const question7 = "What Planet has the most moons?";
 console.log(question7);
 let answers7 = prompt("a. Earth b. Jupiter c. Venus d. Saturn ");
@@ -171,11 +180,12 @@ if (answers7.trim().toLowerCase() == "d") {
     )
   );
 } else {
- (answers7.trim().toLowerCase() == "a", "b", "c");
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
+  answers7.trim().toLowerCase() == "a", "b", "c";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
 const question8 = "True or False? AB- is the most common blood type.";
 console.log(question8);
 let answers8 = prompt("a. True b. False ");
@@ -191,11 +201,12 @@ if (answers8.trim().toLowerCase() == "b") {
     )
   );
 } else {
- (answers8.trim().toLowerCase() == "a");
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
+  answers8.trim().toLowerCase() == "a";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
 const question9 = "What sign is the opposite of Scorpio in Zodiac?";
 console.log(question9);
 let answers9 = prompt("a. Virgo b. Capricorn c. Taurus d. Gemini ");
@@ -205,23 +216,21 @@ while (!("aAbBcCdD".includes(answers9) && answers9.length == 1)) {
 }
 if (answers9.trim().toLowerCase() == "c") {
   grade = grade + 2;
-  console.log(
-    chalk.green(
-      "Mmhmm. Taurus means 'bull' in latin."
-    )
-  );
+  console.log(chalk.green("Mmhmm. Taurus means 'bull' in latin."));
 } else {
- ((answers9.trim().toLowerCase() == "a", "b", "d"));
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
-const question10 = "True or False? The Unicorn is the National Animal of Scotland.";
+  answers9.trim().toLowerCase() == "a", "b", "d";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
+const question10 =
+  "True or False? The Unicorn is the National Animal of Scotland.";
 console.log(question10);
 let answers10 = prompt("a. True b. False ");
 
 while (!("aAbB".includes(answers10) && answers10.length == 1)) {
-  answers7 = prompt("Please enter only a given letter: ");
+  answers10 = prompt("Please enter only a given letter: ");
 }
 if (answers10.trim().toLowerCase() == "a") {
   grade = grade + 2;
@@ -231,27 +240,85 @@ if (answers10.trim().toLowerCase() == "a") {
     )
   );
 } else {
- (answers10.trim().toLowerCase() == "b");
-{
-  console.log(chalk.red("That is not the correct answer!"));
-}}
-console.log()
-console.log("You're finished! Let's see how you did...")
+  answers10.trim().toLowerCase() == "b";
+  {
+    console.log(chalk.red("That is not the correct answer!"));
+  }
+}
+console.log();
+console.log("You're finished! Let's see how you did...");
 
-while (grade <=10) {
-  console.log (`Sorry, you got ${grade} out of 20. You got an F. `);
-} if (grade<= 11 && grade >=12) {
-  console.log (`Sorry, you got ${grade} out of 20. You got a D. `);
-} if (grade <= 13 && grade >=14 ) {
-  console.log (`You got ${grade} out of 20. You got a C. `);
-} if (grade <= 15 && grade >=16 ) {
-  console.log (`Great Job! You got ${grade} out of 20, you got a B. `);
-} if (grade <= 17 && grade >=19 ) {
-  console.log (`Awesome! You got ${grade} out of 20, you got an A. `);
-} else (grade>=20 ) 
-  console.log (`Awesome! You got ${grade} out of 20, you got an A+. `);
+
+    if (grade >= 20) {
+        console.log (`Awesome! You got ${grade} out of 20, you got an A+. `);
+    }
+    else if (grade >= 18) {
+        console.log (`Great Job! You got ${grade} out of 20, you got an A. `);
+    }
+else if (grade >= 16) {
+    console.log (`Great Job! You got ${grade} out of 20, you got a B. `);
+}
+else if (grade >= 14) {
+    console.log (`Great Job! You got ${grade} out of 20, you got a C. `);
+}
+else if (grade >= 12) {
+    console.log (`Sorry, you got ${grade} out of 20. You got a D. `);
+}
+else {
+    console.log (`Sorry, you got ${grade} out of 20. You got an F. `);
+};
+
 
 const note = () => {
-  console.log("Thank you for your time!");
+  const percentage = () => {
+    const getGrade = (grade / 20) * 100;
+    console.log(`Your final score is ${getGrade}%`);
+  };
+  percentage();
+
+
+
+
+//   function score(letter) {
+//     switch (letter) {
+//       case "A":
+//         console.log(`You got an ${letter}, awesome!`);
+//         break;
+//       case "B":
+//         console.log(`You got a ${letter}, nice!`);
+//         break;
+//       case "C":
+//         console.log(`You got a ${letter}, good!`);
+//         break;
+//       case "D":
+//         console.log(`You got a ${letter},do better!`);
+//       default:
+//         console.log(`You got an ${letter}, you need to study!`);
+//         break;
+//     }
+//   }
+//   function getGrade(value, callback) {
+//     let gradeValue;
+//     switch (true) {
+//       case value >= 90:
+//         gradeValue = "A";
+//         break;
+//       case value >= 80:
+//         gradeValue = "B";
+//         break;
+//       case value >= 70:
+//         gradeValue = "C";
+//         break;
+//       case value >= 60:
+//         gradeValue = "D";
+//         break;
+//       default:
+//         gradeValue = "F";
+//         break;
+//     }
+//     callback(gradeValue);
+//   }
+//   getGrade(score);
 };
+
 setTimeout(note, 4000);
