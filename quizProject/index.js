@@ -7,7 +7,7 @@ const Title =
   "=\t\t\t\t\t       =\n" +
   "=\t\t" +
   "  " +
- "QUIZ PROJECT!" +
+  "QUIZ PROJECT!" +
   "\t\t       =" +
   "\n=\t\t\t\t\t       =" +
   "\n================================================";
@@ -21,7 +21,9 @@ const firstName = prompt("First Name: ");
 const lastName = prompt("Last Name: ");
 
 function newUser() {
-  console.log(`Hello ${firstName} ${lastName}! Date: ` + new Date().toLocaleDateString());
+  console.log(
+    `Hello ${firstName} ${lastName}! Date: ` + new Date().toLocaleDateString()
+  );
 }
 console.log();
 newUser();
@@ -39,7 +41,7 @@ if (answers1.trim().toLowerCase() == "c") {
   grade = grade + 2;
   console.log(
     chalk.green(
-      "Hurray! Babylonians created the 7-day-week calendar that we, nationally, use today."
+      "Hurray! Babylonians created the 7-day-week calendar that we, nationally, used today."
     )
   );
 } else {
@@ -49,11 +51,6 @@ if (answers1.trim().toLowerCase() == "c") {
   }
 }
 console.log();
-
-// const note1 = () => {
-//   console.log("Next question!");
-// };
-// setTimeout(note1, 2000);
 
 console.log();
 const question2 = "What State is the capital city of 'Des Moines' in?";
@@ -77,11 +74,6 @@ if (answers2.trim().toLowerCase() == "d") {
   }
 }
 console.log();
-
-// const note2 = () => {
-//   console.log("Next question!");
-// };
-// setTimeout(note2, 4000);
 
 console.log();
 const question3 = "True or False? Celcius is measured in 0 - 100 degrees.";
@@ -247,78 +239,36 @@ if (answers10.trim().toLowerCase() == "a") {
 }
 console.log();
 console.log("You're finished! Let's see how you did...");
+const percentage = () => {
+  const getGrade = (grade / 20) * 100;
+  console.log(`Your final score is ${getGrade}%`);
+};
+percentage();
 
+if (grade >= 20) {
+  console.log(`Awesome! You got an A+. `);
+} else if (grade >= 18) {
+  console.log(`Great Job! You got an A. `);
+} else if (grade >= 16) {
+  console.log(`Great Job! You got a B. `);
+} else if (grade >= 14) {
+  console.log(`Great Job! You got a C. `);
+} else if (grade >= 12) {
+  console.log(`Sorry, you got a D. `);
+} else {
+  console.log(`Sorry, you got an F. `);
+}
 
-    if (grade >= 20) {
-        console.log (`Awesome! You got ${grade} out of 20, you got an A+. `);
-    }
-    else if (grade >= 18) {
-        console.log (`Great Job! You got ${grade} out of 20, you got an A. `);
-    }
-else if (grade >= 16) {
-    console.log (`Great Job! You got ${grade} out of 20, you got a B. `);
-}
-else if (grade >= 14) {
-    console.log (`Great Job! You got ${grade} out of 20, you got a C. `);
-}
-else if (grade >= 12) {
-    console.log (`Sorry, you got ${grade} out of 20. You got a D. `);
-}
-else {
-    console.log (`Sorry, you got ${grade} out of 20. You got an F. `);
+userAccount = {
+  name: firstName + "" + lastName,
+  date: new Date().toLocaleDateString(),
+  score: grade,
 };
 
-
-const note = () => {
-  const percentage = () => {
-    const getGrade = (grade / 20) * 100;
-    console.log(`Your final score is ${getGrade}%`);
-  };
-  percentage();
-
-
-
-
-//   function score(letter) {
-//     switch (letter) {
-//       case "A":
-//         console.log(`You got an ${letter}, awesome!`);
-//         break;
-//       case "B":
-//         console.log(`You got a ${letter}, nice!`);
-//         break;
-//       case "C":
-//         console.log(`You got a ${letter}, good!`);
-//         break;
-//       case "D":
-//         console.log(`You got a ${letter},do better!`);
-//       default:
-//         console.log(`You got an ${letter}, you need to study!`);
-//         break;
-//     }
-//   }
-//   function getGrade(value, callback) {
-//     let gradeValue;
-//     switch (true) {
-//       case value >= 90:
-//         gradeValue = "A";
-//         break;
-//       case value >= 80:
-//         gradeValue = "B";
-//         break;
-//       case value >= 70:
-//         gradeValue = "C";
-//         break;
-//       case value >= 60:
-//         gradeValue = "D";
-//         break;
-//       default:
-//         gradeValue = "F";
-//         break;
-//     }
-//     callback(gradeValue);
-//   }
-//   getGrade(score);
-};
-
-setTimeout(note, 4000);
+fs.writeFile(
+  "userAccountDatabase.txt",
+  JSON.stringify(userAccount),
+  (err) => {
+    if (err) throw err;
+  }
+);
